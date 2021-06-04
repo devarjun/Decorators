@@ -1,10 +1,10 @@
-def div(a,b):
-    print(a/b)
-def Zero(func):
-    def inner(a,b):
+def NewSub(func):
+    def Sub(a,b):
         if a<b:
             a,b = b,a
-        return func(a,b)
-    return inner
-div = Zero(div)
-div(2,4)
+            print(a - b)
+    return Sub
+@NewSub
+def MainSub(a,b):
+    print(a - b)
+MainSub(63,136)
